@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route, Router } from 'react-router-dom';
 import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
 import Blackjack from './pages/blackjack';
@@ -15,7 +15,7 @@ import Contact from './pages/contact';
 
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <Router>
       <Layout>
        <Routes>
          <Route path="/" element={<HomePage />} />
