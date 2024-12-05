@@ -1,5 +1,5 @@
-import React from 'react';
-import { HashRouter, Routes, Route, Router } from 'react-router-dom';
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
 import Blackjack from './pages/blackjack';
@@ -11,11 +11,13 @@ import Solitaire from './pages/solitaire';
 import Spades from './pages/spades';
 import GinRummy from './pages/gin-rummy';
 import Contact from './pages/contact';
+import CardManager from './components/cardManager';
+
 
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Layout>
        <Routes>
          <Route path="/" element={<HomePage />} />
@@ -28,6 +30,7 @@ function App() {
          <Route path="/spades" element={<Spades />} />
          <Route path="/gin-rummy" element={<GinRummy />} />
          <Route path="/contact" element={<Contact />} />
+         <Route path="/cardManager" element={<CardManager />} /> 
       </Routes>
      </Layout>
     </BrowserRouter>

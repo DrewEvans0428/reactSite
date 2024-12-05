@@ -6,7 +6,7 @@ function Header() {
     return (
         <header id="main-header">
             <div className="main-header">
-                <img src="/images/spade_logo.jpg" alt="Spades" />
+                <img src="images/spade_logo.jpg" alt="Spades" />
             </div>
             <nav>
                 <ul className="nav-links">

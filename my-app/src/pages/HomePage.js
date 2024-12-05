@@ -9,7 +9,7 @@ function HomePage() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await fetch('/project.json');
+                const response = await fetch(`${process.env.PUBLIC_URL}/project.json`);
                 const jsonData = await response.json();
                 setData(jsonData.homePage);
             } catch (error) {
